@@ -5,43 +5,49 @@ import Cart from "./components/Cart.vue";
 import CartItem from "./components/CartItem.vue";
 
 const products = [
-  // Existing products
+  // Existing products with images
   {
     name: "Classic Cheeseburger",
     description:
       "A juicy beef patty topped with melted cheese, lettuce, tomato, onions, pickles, and special sauce.",
     price: 8.99,
+    image: "./src/assets/images/classic_cheeseburger.jpg",
   },
   {
     name: "Bacon Deluxe Burger",
     description:
       "Our classic cheeseburger topped with crispy bacon strips for extra flavor.",
     price: 10.99,
+    image: "./src/assets/images/bacon_deluxe_burger.jpg",
   },
   {
     name: "Veggie Burger",
     description:
       "A delicious plant-based patty served with lettuce, tomato, onions, pickles, and vegan mayo.",
     price: 9.99,
+    image: "./src/assets/images/veggie_burger.png",
   },
   {
     name: "Double BBQ Burger",
     description:
       "Two beef patties smothered in BBQ sauce, topped with cheddar cheese, crispy onions, and lettuce.",
     price: 12.99,
+    image: "./src/assets/images/double_bbq_burger.png",
   },
-  // New milkshake products
+  // New milkshake products with images
   {
     name: "Chocolate Milkshake",
     description:
       "A creamy chocolate milkshake topped with whipped cream and chocolate syrup.",
     price: 5.99,
+    image: "./src/assets/images/chocolate_milkshake.png",
   },
   {
     name: "Strawberry Milkshake",
     description:
       "A refreshing strawberry milkshake made with fresh strawberries and topped with whipped cream.",
     price: 6.49,
+    image: "./src/assets/images/strawberry_milkshake.png",
   },
 ];
 
