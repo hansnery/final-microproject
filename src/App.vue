@@ -1,9 +1,13 @@
 <script setup lang="ts">
+// Import necessary functions from Vue
 import { ref } from "vue";
+// Import components
 import Product from "./components/Product.vue";
 import Cart from "./components/Cart.vue";
+// Import CartItem component
 import CartItem from "./components/CartItem.vue";
 
+// Define array of products with their details
 const products = [
   // Existing products with images
   {
@@ -51,18 +55,22 @@ const products = [
   },
 ];
 
+// Create a reactive reference for the cart items
 const cartItems = ref([]);
 
+// Method to add item to the cart
 const addToCart = (item) => {
   cartItems.value.push(item);
 };
 
+// Method to remove item from the cart
 const removeFromCart = (item) => {
   cartItems.value = cartItems.value.filter((i) => i !== item);
 };
 </script>
 
 <template>
+  <!-- Main container for the app -->
   <div>
     <!-- Navbar -->
     <nav class="navbar">
@@ -88,6 +96,7 @@ const removeFromCart = (item) => {
 
     <!-- Grid layout for products -->
     <div class="product-grid">
+      <!-- Loop through products and render Product component for each -->
       <Product
         v-for="(product, index) in products"
         :key="index"
@@ -96,31 +105,36 @@ const removeFromCart = (item) => {
       />
     </div>
 
+    <!-- Render Cart component with cart items and remove-from-cart event handler -->
     <Cart :cartItems="cartItems" @remove-from-cart="removeFromCart" />
   </div>
 </template>
 
 <style scoped>
+/* Scoped styles for logo */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+/* Hover effect for logo */
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+/* Hover effect for logo in Vue components */
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 
+/* Styling for product grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
-/* Navbar */
+/* Navbar styles */
 .navbar {
   background-color: #333;
   color: #fff;
@@ -140,7 +154,7 @@ const removeFromCart = (item) => {
   text-decoration: none;
 }
 
-/* Title */
+/* Title styles */
 .title {
   text-align: center;
   margin-top: 20px;
