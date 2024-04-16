@@ -20,7 +20,9 @@ export default {
   },
   computed: {
     totalPrice() {
-      return this.cartItems.reduce((total, item) => total + item.price, 0);
+      return this.cartItems
+        .reduce((total, item) => total + item.price, 0)
+        .toFixed(2);
     },
   },
   methods: {
@@ -39,5 +41,11 @@ export default {
 ul {
   list-style-type: none;
   padding: 0;
+}
+p {
+  /* Remove trailing zeros and decimal point */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum";
 }
 </style>
