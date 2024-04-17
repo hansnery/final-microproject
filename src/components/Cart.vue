@@ -13,6 +13,8 @@
     </ul>
     <!-- Display total price -->
     <p>Total Price: ${{ totalPrice }}</p>
+
+    <router-link :to="{name: 'Checkout', params: { item: cartItems }}">Checkout</router-link>
   </div>
 </template>
 
@@ -52,10 +54,12 @@ export default {
   border: 1px solid #ccc;
   padding: 10px;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 /* Style for total price paragraph */
 p {
   /* Remove trailing zeros and decimal point for better visual appearance */
