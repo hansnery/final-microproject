@@ -37,7 +37,8 @@ const addToCart = () => {
 .product {
   border: 1px solid #ccc; /* Border around the product */
   padding: 10px; /* Padding inside the product */
-  text-align: center; /* Center-align the content */
+  text-align: center; /* Center-align the content */  
+  color: black;
 }
 
 /* Styling for the product image */

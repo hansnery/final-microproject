@@ -31,6 +31,7 @@ const removeFromCart = () => {
 .cart-item {
   border-bottom: 1px solid #ccc;
   padding: 5px 0;
+  color:black;
 }
 /* Style for remove button */
 button {

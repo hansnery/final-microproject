@@ -13,8 +13,6 @@
     </ul>
     <!-- Display total price -->
     <p>Total Price: ${{ totalPrice }}</p>
-
-    <router-link :to="{name: 'Checkout', params: { item: cartItems }}">Checkout</router-link>
   </div>
 </template>
 
@@ -53,6 +51,7 @@ export default {
 .cart {
   border: 1px solid #ccc;
   padding: 10px;
+  color:black;
 }
 
 ul {
